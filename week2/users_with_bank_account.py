@@ -28,8 +28,8 @@ class User:
         self.name = name
         self.email = email
         self.accounts = {
-            "checking": BankAccount(int_rate=0.01, balance=0),
-            "savings": BankAccount(int_rate=0.02, balance=0)
+            "bankaccount1": BankAccount(int_rate=0.03, balance=0),
+            "bankaccount2": BankAccount(int_rate=0.05, balance=0)
         }
 
     def make_deposit(self, amount, account_name):
@@ -56,7 +56,7 @@ class User:
             if self.accounts[from_account].balance >= amount:
                 self.accounts[from_account].withdraw(amount)
                 other_user.accounts[to_account].deposit(amount)
-                print(f"Transferred ${amount} from {self.name}'s to {other_user.name}")
+                print(f"Transferred ${amount} from {self.name}'s {from_account} to {other_user.name}'s {to_account}")
             else:
                 print(f"Not enough funds to transfer from {self.name}'s {from_account} account")
         else:
