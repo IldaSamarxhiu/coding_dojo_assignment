@@ -27,7 +27,10 @@ class User:
     def __init__(self, name, email):
         self.name = name
         self.email = email
-        self.accounts = BankAccount(int_rate=0.02, balance=0)
+        self.accounts = {
+            "checking": BankAccount(int_rate=0.01, balance=0),
+            "savings": BankAccount(int_rate=0.02, balance=0)
+        }
 
     def make_deposit(self, amount, account_name):
         if account_name in self.accounts:
