@@ -7,14 +7,12 @@
 <body>
 <div class="container">
     <h2>Submitted Info</h2>
-    <ul class="list-group">
-        <li class="list-group-item">Name: {{ session['name'] }}</li>
-        <li class="list-group-item">Dojo Location: {{ session['location'] }}</li>
-        <li class="list-group-item">Favorite Language: {{ session['language'] }}</li>
-        <li class="list-group-item">Comment: {{ session['comment'] }}</li>
-        <li class="list-group-item">Experience: {{ session['experience'] }}</li>
-        <li class="list-group-item">Interests: {{ session['interests'] | join(', ') }}</li>
-    </ul>
+    <p><strong>Name:</strong> {{ session['name'] }}</p>
+    <p><strong>Dojo Location:</strong> {{ session['location'] }}</p>
+    <p><strong>Favorite Language:</strong> {{ session['language'] }}</p>
+    <p><strong>Comment:</strong> {{ session['comment'] }}</p>
+    <p><strong>Experience:</strong> {{ session['experience'] }}</p>
+    <p><strong>Interests:</strong> {{ session['interests'] }}</p>
     <a href="/" class="btn btn-primary mt-3">Go Back</a>
 </div>
 </body>
