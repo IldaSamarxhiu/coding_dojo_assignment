@@ -1,0 +1,5 @@
+select * from names.names;
+insert into names (name, created_at, updated_at) values ("Ilda", now(), now());
+insert into names (name, created_at, updated_at) values ("Ninja", now(), now());
+update names set name = "Frank" where id = 2;
+delete from names where id = 2;
